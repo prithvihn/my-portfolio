@@ -377,8 +377,10 @@ body:hover .cursor-glow {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0.6;
 }
 
 .orbit-icons {
@@ -400,7 +402,8 @@ body:hover .cursor-glow {
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0.85;
     top: 50%;
     left: 50%;
     transform: rotate(var(--angle)) translateX(350px) rotate(calc(-1 * var(--angle)));
@@ -446,13 +449,46 @@ body:hover .cursor-glow {
     justify-content: center;
 }
 
+/* Radial gradient glow behind the photo */
+.hero-photo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(ellipse at center,
+            rgba(100, 255, 218, 0.1) 0%,
+            rgba(100, 255, 218, 0.05) 30%,
+            rgba(0, 150, 136, 0.03) 50%,
+            transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(20px);
+    pointer-events: none;
+}
+
 .hero-photo img {
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 75vh;
     object-fit: contain;
-    filter: drop-shadow(0 0 40px rgba(100, 255, 218, 0.2));
+    /* Cool down highlights and reduce warm tones */
+    filter:
+        drop-shadow(0 0 60px rgba(100, 255, 218, 0.15)) drop-shadow(0 0 30px rgba(0, 150, 136, 0.08)) contrast(1.02) saturate(0.95) brightness(0.98);
+    /* Soft feathered edge mask for natural blending */
+    -webkit-mask-image: radial-gradient(ellipse 95% 95% at center,
+            black 70%,
+            rgba(0, 0, 0, 0.9) 80%,
+            rgba(0, 0, 0, 0.6) 90%,
+            transparent 100%);
+    mask-image: radial-gradient(ellipse 95% 95% at center,
+            black 70%,
+            rgba(0, 0, 0, 0.9) 80%,
+            rgba(0, 0, 0, 0.6) 90%,
+            transparent 100%);
 }
 
 /* ========================================
