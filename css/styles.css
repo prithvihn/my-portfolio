@@ -379,8 +379,8 @@ body:hover .cursor-glow {
     height: 100%;
     border: 2px dashed rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    filter: blur(2px);
-    opacity: 0.6;
+    filter: blur(1px);
+    opacity: 0.35;
 }
 
 .orbit-icons {
@@ -389,25 +389,28 @@ body:hover .cursor-glow {
     left: 0;
     width: 100%;
     height: 100%;
-    animation: orbit-rotate 25s linear infinite;
+    animation: orbit-rotate 32s ease-in-out infinite;
 }
 
 .orbit-icon {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background: #ffffff;
+    width: 65px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.92);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    opacity: 0.85;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     top: 50%;
     left: 50%;
     transform: rotate(var(--angle)) translateX(350px) rotate(calc(-1 * var(--angle)));
-    margin: -50px 0 0 -50px;
+    margin: -32.5px 0 0 -32.5px;
+}
+
+.orbit-icon i {
+    opacity: 1;
 }
 
 .orbit-icon:nth-child(1) i {
@@ -417,6 +420,7 @@ body:hover .cursor-glow {
 .orbit-icon:nth-child(2) i {
     color: #61dafb;
 }
+
 
 .orbit-icon:nth-child(3) i {
     color: #2496ed;
@@ -512,11 +516,11 @@ body:hover .cursor-glow {
     }
 
     .orbit-icon {
-        width: 110px;
-        height: 110px;
-        font-size: 2.8rem;
+        width: 72px;
+        height: 72px;
+        font-size: 1.8rem;
         transform: rotate(var(--angle)) translateX(375px) rotate(calc(-1 * var(--angle)));
-        margin: -55px 0 0 -55px;
+        margin: -36px 0 0 -36px;
     }
 
     .hero-photo {
@@ -558,11 +562,11 @@ body:hover .cursor-glow {
     }
 
     .orbit-icon {
-        width: 100px;
-        height: 100px;
-        font-size: 2.5rem;
+        width: 65px;
+        height: 65px;
+        font-size: 1.6rem;
         transform: rotate(var(--angle)) translateX(350px) rotate(calc(-1 * var(--angle)));
-        margin: -50px 0 0 -50px;
+        margin: -32.5px 0 0 -32.5px;
     }
 
     .hero-photo {
@@ -605,11 +609,11 @@ body:hover .cursor-glow {
     }
 
     .orbit-icon {
-        width: 90px;
-        height: 90px;
-        font-size: 2.2rem;
+        width: 58px;
+        height: 58px;
+        font-size: 1.4rem;
         transform: rotate(var(--angle)) translateX(300px) rotate(calc(-1 * var(--angle)));
-        margin: -45px 0 0 -45px;
+        margin: -29px 0 0 -29px;
     }
 
     .hero-photo {
@@ -669,11 +673,11 @@ body:hover .cursor-glow {
     }
 
     .orbit-icon {
-        width: 75px;
-        height: 75px;
-        font-size: 1.8rem;
+        width: 48px;
+        height: 48px;
+        font-size: 1.15rem;
         transform: rotate(var(--angle)) translateX(240px) rotate(calc(-1 * var(--angle)));
-        margin: -37.5px 0 0 -37.5px;
+        margin: -24px 0 0 -24px;
     }
 
     .hero-photo {
@@ -758,11 +762,11 @@ body:hover .cursor-glow {
     }
 
     .orbit-icon {
-        width: 65px;
-        height: 65px;
-        font-size: 1.5rem;
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
         transform: rotate(var(--angle)) translateX(190px) rotate(calc(-1 * var(--angle)));
-        margin: -32.5px 0 0 -32.5px;
+        margin: -21px 0 0 -21px;
     }
 
     .hero-photo {
@@ -860,11 +864,11 @@ body:hover .cursor-glow {
     }
 
     .orbit-icon {
-        width: 55px;
-        height: 55px;
-        font-size: 1.3rem;
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
         transform: rotate(var(--angle)) translateX(160px) rotate(calc(-1 * var(--angle)));
-        margin: -27.5px 0 0 -27.5px;
+        margin: -18px 0 0 -18px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     }
 
